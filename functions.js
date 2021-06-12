@@ -1,4 +1,4 @@
-let url = "https://tt905-224723.herokuapp.com/times/"
+let url = "https://tt905-224723.herokuapp.com/times"
 
 async function callFetchWithGet(){
     let headers = new Headers();
