@@ -1,4 +1,4 @@
-let url = "https://tt905-224723.herokuapp.com/times"
+let url = "https://tt905-224723.herokuapp.com/times/"
 
 async function callFetchWithGet(){
     let headers = new Headers();
@@ -28,21 +28,6 @@ async function callFetchWithPost(time){
         },
         body :JSON.stringify({
             'time' : time
-        })
-    }
-    await fetch(url, options);
-}
-
-async function callFetchWithPost(time){
-    const options = {
-        method : 'POST',
-        mode : 'cors',
-        headers : {
-            'Accept' : 'application/json',
-            'content-type' : 'application/json'
-        },
-        body :JSON.stringify({
-            'estado' : estado
         })
     }
     await fetch(url, options);
@@ -84,15 +69,6 @@ function submitPost(){
     const time = form["time"].value;
     console.log(time);
     callFetchWithPost(time);
-    return false;
-}
-
-function submitPost(){
-    console.log("entrei na função2");
-    const form = document.forms['postForm'];
-    const time = form["estado"].value;
-    console.log(estado);
-    callFetchWithPost(estado);
     return false;
 }
 
