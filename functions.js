@@ -33,6 +33,21 @@ async function callFetchWithPost(time){
     await fetch(url, options);
 }
 
+async function callFetchWithPost(time){
+    const options = {
+        method : 'POST',
+        mode : 'cors',
+        headers : {
+            'Accept' : 'application/json',
+            'content-type' : 'application/json'
+        },
+        body :JSON.stringify({
+            'estado' : estado
+        })
+    }
+    await fetch(url, options);
+}
+
 async function callFetchWithPut(id, novoTime){
     const options = {
         method : 'PUT',
