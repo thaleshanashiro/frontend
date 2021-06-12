@@ -87,6 +87,15 @@ function submitPost(){
     return false;
 }
 
+function submitPost(){
+    console.log("entrei na função2");
+    const form = document.forms['postForm'];
+    const time = form["estado"].value;
+    console.log(estado);
+    callFetchWithPost(estado);
+    return false;
+}
+
 function submitPut(){
     const form = document.forms['putForm'];
     const id = form["id"].value;
